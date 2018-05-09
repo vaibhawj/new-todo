@@ -3,7 +3,7 @@ import logo from './logo.png';
 import './App.css';
 import {
   MuiThemeProvider, TextField,
-  FloatingActionButton
+  FloatingActionButton, List
 } from 'material-ui';
 import { Add } from 'material-ui-icons';
 import Tasks from './Tasks';
@@ -11,7 +11,7 @@ import Tasks from './Tasks';
 class App extends React.Component {
 
   handleBtnClick() {
-    if(!this.state.taskInput) return;
+    if (!this.state.taskInput) return;
     const tasks = this.state.tasks;
     tasks.push(this.state.taskInput);
     this.setState({
@@ -40,20 +40,21 @@ class App extends React.Component {
     return (
       <div className="App">
         <MuiThemeProvider>
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">TODOs</h1>
-          </header>
-          <div className="App-intro">
-            <TextField onChange={this.handleTxtChange} value={this.state.taskInput} />
-            <FloatingActionButton onClick={this.handleBtnClick} mini={true}>
-              <Add />
-            </FloatingActionButton>
-            <ul className="tasks">
-              <Tasks tasks={this.state.tasks} />
-            </ul>
+          <div>
+            <header className="App-header">
+              <img src={logo} className="App-logo" alt="logo" />
+              <h1 className="App-title">TODOs</h1>
+            </header>
+            <div className="App-intro">
+              <TextField onChange={this.handleTxtChange} value={this.state.taskInput} id="text-input" />
+              <FloatingActionButton onClick={this.handleBtnClick} mini={true}>
+                <Add />
+              </FloatingActionButton>
+              <List className="tasks">
+                <Tasks tasks={this.state.tasks} />
+              </List>
+            </div>
           </div>
-
         </MuiThemeProvider>
       </div>
     );

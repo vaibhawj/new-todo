@@ -36,5 +36,6 @@
 .tasks {
   text-align: left;
   margin-left: 40%;
+  margin-right: 40%;
   list-style-type: none;
 }
