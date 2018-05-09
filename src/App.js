@@ -1,9 +1,8 @@
 import React from 'react';
-import logo from './logo.png';
 import './App.css';
 import {
   MuiThemeProvider, TextField,
-  FloatingActionButton, List
+  FloatingActionButton, List, AppBar
 } from 'material-ui';
 import { Add } from 'material-ui-icons';
 import Tasks from './Tasks';
@@ -42,8 +41,7 @@ class App extends React.Component {
         <MuiThemeProvider>
           <div>
             <header className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
-              <h1 className="App-title">TODOs</h1>
+            <AppBar title="TODOs" />
             </header>
             <div className="App-intro">
               <TextField onChange={this.handleTxtChange} value={this.state.taskInput} id="text-input" />
