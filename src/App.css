@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40px;
+}
+
+.App-header {
+  background-color: grey;
+  height: 80px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+  margin-top: 10px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.App-result {
+  font-size: small;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.tasks {
+  text-align: left;
+  margin-left: 40%;
+  list-style-type: none;
+}
